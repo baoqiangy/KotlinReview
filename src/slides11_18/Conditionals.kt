@@ -64,6 +64,16 @@ fun main() {
             println("Default case")
         }
     }
+
+    //Even more powerful since it allows arbitrary conditions by leaving out the variable
+    // after the 'when' keyword
+    var age = 26
+    var hasAccess = true
+    when {
+        age >= 18 && !hasAccess -> println("Falsely rejected")
+        age < 18 && hasAccess -> println("Falsely approved")
+        else -> println("Correctly authorized")
+    }
 }
 
 fun earthSurfaceTemp():Int = 288
