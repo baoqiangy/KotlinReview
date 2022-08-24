@@ -13,7 +13,7 @@ fun main() {
 
     val score = 60
 
-    //Conditional expressoin in assignment
+    //Conditional expression in assignment
     var grade = if (score>=90)          'A'
                 else if (score >= 80)   'B'
                 else if (score >= 70)   'C'
@@ -40,4 +40,30 @@ fun main() {
         in 'A'..'C' ->  println("Pass")
         else        ->  println("Fail")
     }
+
+    /*
+    There are various ways to define the value(s) to compare against:
+        Fixed value (700)
+        Multiple fixed values (0, 1, 2)
+        Ranges (in 300..699)
+        Ranges with negation (“not in range”) (!in 0..300)
+        Function call (earthSurfaceTemp())
+        Type check (is Int)
+        Default case (else)
+    * */
+    var temperatureInKelvin = 89;
+    when(temperatureInKelvin) {
+        700                     -> println("This is Mercury’s max surface temperature")
+        0, 1, 2                 -> println("This i as cold as it can physically get")
+        in 300..699       -> println("This temperature is possible on Mercury")
+        !in 0..300        -> println("This is pretty hot")
+        earthSurfaceTemp()      -> println("This is earth’s average surface temperature")
+        is Int                  -> println("The given temperature is of type Int")
+        else                    -> {
+            // Example of a multiline code block
+            println("Default case")
+        }
+    }
 }
+
+fun earthSurfaceTemp():Int = 288

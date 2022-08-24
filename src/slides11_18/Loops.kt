@@ -45,9 +45,9 @@ fun main() {
     for(x in 10 downTo 0) println(x)
 
     //repeat expression
-    println("repeat action (lambda) inside parentesis")
+    println("repeat action (lambda) inside parenthesis")
     repeat(3, { println("hello") })
-    println("repeat action (lambda) after parentesis")
+    println("repeat action (lambda) after parenthesis")
     repeat(3){
         println("hello")
     }

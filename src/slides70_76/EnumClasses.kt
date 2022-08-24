@@ -1,8 +1,8 @@
 package slides70_76
 
 enum class Direction (private val coordinate: Coordinate) {
-    NORTH(Coordinate(0, -1)),
-    SOUTH(Coordinate(0, 1)),
+    NORTH(Coordinate(0, 1)),
+    SOUTH(Coordinate(0, -1)),
     WEST(Coordinate(-1, 0)),
     EAST(Coordinate(1, 0));
 
