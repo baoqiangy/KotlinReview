@@ -1,8 +1,21 @@
 package slides1_10
 
-//const val is only allowed in top level scope (outside all classes, functions)
-//It is like "static"
-const val c = 10
+/*
+consts are compile time constants. Meaning that their value has to be assigned during compile time, unlike vals,
+where it can be done at runtime.
+This means, that consts can never be assigned to a function or any class constructor, but only to a String or
+primitive.
+* */
+
+const val c = 4
+
+val v = fib(5)
+
+fun fib(n:Int):Int{
+    if(n <= 1)
+        return n
+    return fib(n-1)+fib(n-2)
+}
 
 fun main() {
 
